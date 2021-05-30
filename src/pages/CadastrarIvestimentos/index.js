@@ -28,23 +28,24 @@ export default function CadastarInvestimento() {
 
 
   return(
-        <div className="coitainer">
-            <Layout className="layout">
-              <Header>
-                <div className="logo" />
-                <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
-                  <Menu.Item key="1">
-                    <Link to="/cadastar-investimento">
-                      Cadastrar Investimento
-                    </Link>
-                  </Menu.Item>
-                  <Menu.Item key="2">
-                  <Link to="/listar-investimentos">
-                      Listar Investimento
-                    </Link>
-                  </Menu.Item>
+    <div className="coitainer">
+    <Layout className="layout">
+      <Header>
+        <div className="logo" />
+        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
+          <Menu.Item key="1">
+            <Link to="/cadastar-investimento">
+              Cadastrar Investimento
+            </Link>
+          </Menu.Item>
+          <Menu.Item key="2">
+          <Link to="/listar-investimentos">
+              Listar Investimento
+            </Link>
+          </Menu.Item>
 
-                </Menu>
+        </Menu>
+
          </Header>
          <Content style={{padding: '0 50px'}}>
            <div className="site-layout-content">
