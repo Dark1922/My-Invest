@@ -7,9 +7,9 @@ export default function Routes(){
 
     <BrowserRouter>
     <Switch>
-      <Route exact path="/" component={Listarinvestimentos}></Route>
-      <Route exact path="/cadastar-investimentos" component={CadastarInvestimento}></Route>
-      <Route exact path="/listar-investimentos" component={Listarinvestimentos}></Route>
+      <Route exact path="/" component={Listarinvestimentos} />
+      <Route exact path="/cadastar-investimento" component={CadastarInvestimento  } />
+      <Route exact path="/listar-investimentos" component={Listarinvestimentos} />
     </Switch>
     </BrowserRouter>
   );

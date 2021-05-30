@@ -9,7 +9,7 @@ const { Column } = Table;
 
 
 
-export default function Listarinvestimentos() {
+export default function ListarInvestimentos() {
 
     const [investimentos ,setInvestimentos] = useState([]);//vetor vazio inicial
     function remove(record){
@@ -23,12 +23,12 @@ export default function Listarinvestimentos() {
                 <div className="logo" />
                 <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
                   <Menu.Item key="1">
-                    <Link to="/cadastrar-investimento">
+                    <Link to="/cadastar-investimento">
                       Cadastrar Investimento
                     </Link>
                   </Menu.Item>
                   <Menu.Item key="2">
-                  <Link to="/cadastrar-investimento">
+                  <Link to="/listar-investimentos">
                       Listar Investimento
                     </Link>
                   </Menu.Item>

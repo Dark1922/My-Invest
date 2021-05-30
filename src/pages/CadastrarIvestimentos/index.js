@@ -28,29 +28,29 @@ export default function CadastarInvestimento() {
 
 
   return(
+        <div className="coitainer">
+            <Layout className="layout">
+              <Header>
+                <div className="logo" />
+                <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
+                  <Menu.Item key="1">
+                    <Link to="/cadastar-investimento">
+                      Cadastrar Investimento
+                    </Link>
+                  </Menu.Item>
+                  <Menu.Item key="2">
+                  <Link to="/listar-investimentos">
+                      Listar Investimento
+                    </Link>
+                  </Menu.Item>
 
-   <div className="container">
-       <Layout className="layout">
-         <Header>
-           <div className="logo" />
-           <Menu theme="dark" mode="horizontal" defaultSelectedKeys={[1]}>
-             <Menu.Item key="1">
-             <Link to="/cadastrar-investimentos">
-               Cadastar Investimento
-             </Link>
-             </Menu.Item>
-           <Menu.Item key="2">
-             <Link to="/listar-Ivestimetos">
-               Listar Iventimentos
-             </Link>
-           </Menu.Item>
-
-           </Menu>
+                </Menu>
          </Header>
          <Content style={{padding: '0 50px'}}>
            <div className="site-layout-content">
            <h2>CADASTAR INVESTIMENTO</h2>
-           <Form {...layout} name="basic" initalValues={{
+           <Form {...layout} name="basic"
+           initalValues={{
              remember: true,
            }}
            onFinish={onFinish}
@@ -61,7 +61,7 @@ export default function CadastarInvestimento() {
             name="codigoAtivo"
             rules={[
               {
-                require: true,
+                required: true,
                 message: 'Insira o código do ativo!',
               }
             ]}
@@ -73,7 +73,7 @@ export default function CadastarInvestimento() {
             name="valor"
             rules={[
               {
-                require: true,
+                required: true,
                 message: 'Insira o valor da cota!',
               }
             ]}
@@ -85,7 +85,7 @@ export default function CadastarInvestimento() {
             name="quantidadeCotas"
             rules={[
               {
-                require: true,
+                required: true,
                 message: 'Insira a quantidade de cotas!',
               }
             ]}
@@ -97,7 +97,7 @@ export default function CadastarInvestimento() {
             name="dataCompra"
             rules={[
               {
-                require: true,
+                required: true,
                 message: 'Insira a data da comrpa!',
               }
             ]}
