@@ -35,19 +35,19 @@ export default function Listarinvestimentos() {
 
                 </Menu>
               </Header>
-              <Content style="{{ padding:  '0 50px' }}">
+              <Content styles="{{ padding:  '0 50px' }}">
                 <div className="site-layout-content">
                 <h2>INVESTIEMNTOS</h2>
                 <Table dataSource={investimentos}>
-                  <Column title="Código do ativo" dataIndex="codigoAtivo" key="codigoAtivo"></Column>
-                  <Column title="Valor" dataIndex="valor" key="valor"></Column>
-                  <Column title="Quantidade de cotas" dataIndex="quantidadeCota" key="1"></Column>
-                  <Column title="Data da Compra" dataIndex="dataCompra" key="dataCompra"></Column>
+                  <Column title="Código do ativo" dataIndex="codigoAtivo" key="codigoAtivo" />
+                  <Column title="Valor" dataIndex="valor" key="valor" />
+                  <Column title="Quantidade de cotas" dataIndex="quantidadeCota" key="1" />
+                  <Column title="Data da Compra" dataIndex="dataCompra" key="dataCompra" />
                   <Column title="Remover"  key="atualizar"
                      render={(text, record) => (<Button onClick={() =>remove(record)}
                      type="primary">Remover</Button>)}
                   />
-                      r
+
                 </Table>
                 </div>
               </Content>
