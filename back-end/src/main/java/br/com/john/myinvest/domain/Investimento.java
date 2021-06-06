@@ -9,45 +9,73 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-@Entity //fala que é uma entidade
+@Entity
 public class Investimento {
 	
-	@Id //pq é id dessa tabela
-	@GeneratedValue(strategy = GenerationType.IDENTITY) //gera automatico o valor do id incrementado
-	private Long codigo; //chave primaria
+	@Id
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	private Long codigo;
 	
-	private  String codigoArtigo;
+	private String codigoAtivo;
 	
-	private Double valorNaCota; //double pq é do tipo flutuante
+	private Double valorCota;
 	
 	private Integer quantidadeCotas;
 	
-	private  LocalDate dataCompra; //biblioteca do java que é própria de data
+	private LocalDate dataCompra;
 	
- //Muitos para um . abaixo um objeto do tipo categoria
- //cada categoria pode ter mais de investimento
- @ManyToOne
- @JoinColumn(name="fk_codigo_categoria") //dou um nome pra esse join
- private Categoria categoria;//demos um nome pra seu elemento Categorai do tipo categoria
-//fk = foreinkey chave secundaria vai representar o código de categoria
-	
-	//vamos gerar o getter = recuperar e setters = gerar valor
+	@ManyToOne
+	@JoinColumn(name="fk_codigo_categoria")
+	private Categoria categoria;
 
 	public Long getCodigo() {
 		return codigo;
 	}
- public Categoria getCategoria() {
-		return categoria;
-	}
-	public void setCategoria(Categoria categoria) {
-		this.categoria = categoria;
-	}
-	//verificar se um objeto é igual ao outro e comparar 
-
-	
 
 	public void setCodigo(Long codigo) {
 		this.codigo = codigo;
+	}
+
+	public String getCodigoAtivo() {
+		return codigoAtivo;
+	}
+
+	public void setCodigoAtivo(String codigoAtivo) {
+		this.codigoAtivo = codigoAtivo;
+	}
+
+	public Double getValorCota() {
+		return valorCota;
+	}
+
+	public void setValorCota(Double valorCota) {
+		this.valorCota = valorCota;
+	}
+
+	public Integer getQuantidadeCotas() {
+		return quantidadeCotas;
+	}
+
+	public void setQuantidadeCotas(Integer quantidadeCotas) {
+		this.quantidadeCotas = quantidadeCotas;
+	}
+
+	public LocalDate getDataCompra() {
+		return dataCompra;
+	}
+
+	public void setDataCompra(LocalDate dataCompra) {
+		this.dataCompra = dataCompra;
+	}
+	
+	
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
 	}
 
 	@Override
@@ -56,12 +84,13 @@ public class Investimento {
 		int result = 1;
 		result = prime * result + ((categoria == null) ? 0 : categoria.hashCode());
 		result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
-		result = prime * result + ((codigoArtigo == null) ? 0 : codigoArtigo.hashCode());
+		result = prime * result + ((codigoAtivo == null) ? 0 : codigoAtivo.hashCode());
 		result = prime * result + ((dataCompra == null) ? 0 : dataCompra.hashCode());
 		result = prime * result + ((quantidadeCotas == null) ? 0 : quantidadeCotas.hashCode());
-		result = prime * result + ((valorNaCota == null) ? 0 : valorNaCota.hashCode());
+		result = prime * result + ((valorCota == null) ? 0 : valorCota.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -81,10 +110,10 @@ public class Investimento {
 				return false;
 		} else if (!codigo.equals(other.codigo))
 			return false;
-		if (codigoArtigo == null) {
-			if (other.codigoArtigo != null)
+		if (codigoAtivo == null) {
+			if (other.codigoAtivo != null)
 				return false;
-		} else if (!codigoArtigo.equals(other.codigoArtigo))
+		} else if (!codigoAtivo.equals(other.codigoAtivo))
 			return false;
 		if (dataCompra == null) {
 			if (other.dataCompra != null)
@@ -96,44 +125,14 @@ public class Investimento {
 				return false;
 		} else if (!quantidadeCotas.equals(other.quantidadeCotas))
 			return false;
-		if (valorNaCota == null) {
-			if (other.valorNaCota != null)
+		if (valorCota == null) {
+			if (other.valorCota != null)
 				return false;
-		} else if (!valorNaCota.equals(other.valorNaCota))
+		} else if (!valorCota.equals(other.valorCota))
 			return false;
 		return true;
 	}
-	public String getCodigoArtigo() {
-		return codigoArtigo;
-	}
 
-	public void setCodigoArtigo(String codigoArtigo) {
-		this.codigoArtigo = codigoArtigo;
-	}
-
-	public Double getValorNaCota() {
-		return valorNaCota;
-	}
-
-	public void setValorNaCota(Double valorNaCota) {
-		this.valorNaCota = valorNaCota;
-	}
-
-	public Integer getQuantidadeCotas() {
-		return quantidadeCotas;
-	}
-
-	public void setQuantidadeCotas(Integer quantidadeCotas) {
-		this.quantidadeCotas = quantidadeCotas;
-	}
-
-	public LocalDate getDataCompra() {
-		return dataCompra;
-	}
-
-	public void setDataCompra(LocalDate dataCompra) {
-		this.dataCompra = dataCompra;
-	}
 	
 	
 	

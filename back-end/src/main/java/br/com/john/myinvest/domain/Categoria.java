@@ -1,5 +1,6 @@
 package br.com.john.myinvest.domain;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -7,15 +8,15 @@ import javax.persistence.Id;
 
 @Entity
 public class Categoria {
-	@Id //pq é id dessa tabela
-	@GeneratedValue(strategy = GenerationType.IDENTITY) //gera automatico o valor do id incrementado
-	private Long codigo; //chave primaria
+	
+	@Id
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	private Long codigo;
 	
 	private String nome;
 	
 	private String descricao;
-	
-	
+
 	public Long getCodigo() {
 		return codigo;
 	}
@@ -76,5 +77,6 @@ public class Categoria {
 			return false;
 		return true;
 	}
-
+	
+	
 }
