@@ -1,17 +1,9 @@
 
 <h1 align="center">  My-Invest </h1>
 
-
-## 🔖 Layout 
-
-
-![Animação](https://user-images.githubusercontent.com/48605830/120934395-a182c380-c6d4-11eb-8164-5cc33f54397e.gif)
-
-
-
 ## 🚀 Tecnologias
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
+this project was developed with the following technologies
 
 - HTML
 - CSS
@@ -19,6 +11,13 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - JavaScript
 - ReactJS
 - Spring
+
+
+## 🔖 Layout 
+
+
+![Animação](https://user-images.githubusercontent.com/48605830/120934395-a182c380-c6d4-11eb-8164-5cc33f54397e.gif)
+
 
 
 ## 💻 Projeto
